@@ -1,0 +1,21 @@
+{
+  "name": "mongo-db-poc",
+  "version": "1.0.0",
+  "description": "POC to prove out Mongo DB dev envs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mongodump-lp": "mongodump --db=lilypaddbv2 --collection=activitymappings",
+    "mongodump-devrestore": "mongodump && mongorestore --drop --uri mongodb+srv://devuser:EUvuScZLvLVASag9@cluster0.h7aky.mongodb.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphonso77/mongo-db-poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alphonso77/mongo-db-poc/issues"
+  },
+  "homepage": "https://github.com/alphonso77/mongo-db-poc#readme"
+}
