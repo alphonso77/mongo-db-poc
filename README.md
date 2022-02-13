@@ -1,3 +1,17 @@
+## Starting the Databases
+Start two local running instances of Mongo db in containers.
+> docker-compose up
+
+*To run in detached mode, add the option `-d`*
+
+## Connecting to the Databases
+
+### Localhost 27017
+> mongodb://localhost:27017/?serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&3t.uriVersion=3&3t.connection.name=localhost&3t.alwaysShowAuthDB=true&3t.alwaysShowDBFromUserRole=true
+
+### Localhost 27018
+>mongodb://localhost:27018/?serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&3t.uriVersion=3&3t.connection.name=localhost+mongodb+copy&3t.alwaysShowAuthDB=true&3t.alwaysShowDBFromUserRole=true
+
 ## Mongo Dump - Dev Restore
 Run a single command to take a snapshot of the locally runnning server (port 270117 all dbs and collections) and then restore that snapshot to a Mongo Atlas dev project:
 > npm run mongodump-devrestore
