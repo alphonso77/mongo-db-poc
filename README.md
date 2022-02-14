@@ -1,5 +1,8 @@
 # Mongo DB POC
 
+The purpose of this is to demonstrate:
+* Easily restore dev database hosted in Mongo DB Atlas to two local instances; both instances can be used for comparison purposes. One as a source of truth, and the other as a target for new development. Future work should include automated tests that run spot checks to compare the soure of truth to the targeted developmnt. In addition, Studio 3t has some mature comparison tools that can be used for more in-depth analysis.
+
 ## Dependencies
 
 ### Windows
