@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "mongodump-lp": "mongodump --db=lilypaddbv2 --collection=activitymappings",
-    "mongodump-devrestore": "mongodump && mongorestore --drop --uri mongodb+srv://devuser:EUvuScZLvLVASag9@cluster0.h7aky.mongodb.net"
+    "push-local": "mongodump && mongorestore --drop --config=dev-config.txt",
+    "pull-dev": "mongodump --config=dev-config.txt && npm run restore-primary && npm run restore-secondary",
+    "restore-primary": "mongorestore --drop --uri mongodb://localhost:27017",
+    "restore-secondary": "mongorestore --drop --uri mongodb://localhost:27018"
   },
   "repository": {
     "type": "git",
